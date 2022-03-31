@@ -1,0 +1,2172 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Insights Engine API",
+    "version": "1.0"
+  },
+  "paths": {
+    "/v1/insights/{companyId}/closing-balances": {
+      "get": {
+        "tags": [
+          "Insights"
+        ],
+        "parameters": [
+          {
+            "name": "companyId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "X-Correlation-ID",
+            "in": "header",
+            "description": "X-Correlation-ID",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "default": "caef4e49-dbd9-436e-a413-21e301721214"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ClosingBalanceReport"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ClosingBalanceReport"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ClosingBalanceReport"
+                }
+              }
+            }
+          },
+          "502": {
+            "description": "Server Error"
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/insights/{companyId}/revenue": {
+      "get": {
+        "tags": [
+          "Insights"
+        ],
+        "parameters": [
+          {
+            "name": "companyId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "X-Correlation-ID",
+            "in": "header",
+            "description": "X-Correlation-ID",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "default": "8d57f5a0-0cde-4495-8b65-d2c3daa65dab"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CalculationsReport"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CalculationsReport"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CalculationsReport"
+                }
+              }
+            }
+          },
+          "502": {
+            "description": "Server Error"
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/insights/{companyId}/expenses": {
+      "get": {
+        "tags": [
+          "Insights"
+        ],
+        "parameters": [
+          {
+            "name": "companyId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "X-Correlation-ID",
+            "in": "header",
+            "description": "X-Correlation-ID",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "default": "d43d44c1-71ff-4985-abb9-92ffd1037a30"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CalculationsReport"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CalculationsReport"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CalculationsReport"
+                }
+              }
+            }
+          },
+          "502": {
+            "description": "Server Error"
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/insights/{companyId}/accounts-receivable": {
+      "get": {
+        "tags": [
+          "Insights"
+        ],
+        "parameters": [
+          {
+            "name": "companyId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "X-Correlation-ID",
+            "in": "header",
+            "description": "X-Correlation-ID",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "default": "26b8bf5d-9334-47a4-9b6e-2f12f4694fee"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObligationsReport"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObligationsReport"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObligationsReport"
+                }
+              }
+            }
+          },
+          "502": {
+            "description": "Server Error"
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/insights/{companyId}/accounts-payable": {
+      "get": {
+        "tags": [
+          "Insights"
+        ],
+        "parameters": [
+          {
+            "name": "companyId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "X-Correlation-ID",
+            "in": "header",
+            "description": "X-Correlation-ID",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "default": "28f446b5-4c33-43d2-a8d8-f6b086f5fa60"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObligationsReport"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObligationsReport"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObligationsReport"
+                }
+              }
+            }
+          },
+          "502": {
+            "description": "Server Error"
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/insights/{companyId}/cogs": {
+      "get": {
+        "tags": [
+          "Insights"
+        ],
+        "parameters": [
+          {
+            "name": "companyId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "X-Correlation-ID",
+            "in": "header",
+            "description": "X-Correlation-ID",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "default": "4787f0e9-c234-4952-be3e-9a6ef35d93d1"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CalculationsReport"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CalculationsReport"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CalculationsReport"
+                }
+              }
+            }
+          },
+          "502": {
+            "description": "Server Error"
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/insights/{companyId}/gross-margin": {
+      "get": {
+        "tags": [
+          "Insights"
+        ],
+        "parameters": [
+          {
+            "name": "companyId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "X-Correlation-ID",
+            "in": "header",
+            "description": "X-Correlation-ID",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "default": "a5482ab3-10be-4525-9a52-4a5fa2536ef4"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CalculationsReport"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CalculationsReport"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CalculationsReport"
+                }
+              }
+            }
+          },
+          "502": {
+            "description": "Server Error"
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/insights/{companyId}/net-margin": {
+      "get": {
+        "tags": [
+          "Insights"
+        ],
+        "parameters": [
+          {
+            "name": "companyId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "X-Correlation-ID",
+            "in": "header",
+            "description": "X-Correlation-ID",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "default": "2681e1b5-65d7-452f-9982-fd59a5a4fb5d"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CalculationsReport"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CalculationsReport"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CalculationsReport"
+                }
+              }
+            }
+          },
+          "502": {
+            "description": "Server Error"
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/insights/{companyId}/cash-on-hand": {
+      "get": {
+        "tags": [
+          "Insights"
+        ],
+        "parameters": [
+          {
+            "name": "companyId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "X-Correlation-ID",
+            "in": "header",
+            "description": "X-Correlation-ID",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "default": "8f530ac4-e871-4253-b3ea-218d9440d313"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CashOnHandReport"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CashOnHandReport"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CashOnHandReport"
+                }
+              }
+            }
+          },
+          "502": {
+            "description": "Server Error"
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/insights/{companyId}/account-summaries": {
+      "get": {
+        "tags": [
+          "Insights"
+        ],
+        "parameters": [
+          {
+            "name": "companyId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "X-Correlation-ID",
+            "in": "header",
+            "description": "X-Correlation-ID",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "default": "cc4305dc-1f9f-4c52-b00c-9ced0db2ab23"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/AccountSummaryReport"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AccountSummaryReport"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AccountSummaryReport"
+                }
+              }
+            }
+          },
+          "502": {
+            "description": "Server Error"
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/insights/{companyId}/trend-report": {
+      "get": {
+        "tags": [
+          "Insights"
+        ],
+        "parameters": [
+          {
+            "name": "companyId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "X-Correlation-ID",
+            "in": "header",
+            "description": "X-Correlation-ID",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "default": "27d98847-01d2-4aa5-94b1-c4cd0f0216a3"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/TrendReport"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TrendReport"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TrendReport"
+                }
+              }
+            }
+          },
+          "502": {
+            "description": "Server Error"
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/insights/{companyId}/forecast/revenue-expense": {
+      "get": {
+        "tags": [
+          "Insights"
+        ],
+        "parameters": [
+          {
+            "name": "companyId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "X-Correlation-ID",
+            "in": "header",
+            "description": "X-Correlation-ID",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "default": "147da4f6-180a-41a0-b2e2-103965996e97"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "$ref": "#/components/schemas/GrowthRate"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "$ref": "#/components/schemas/GrowthRate"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "$ref": "#/components/schemas/GrowthRate"
+                  }
+                }
+              }
+            }
+          },
+          "502": {
+            "description": "Server Error"
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AccountsPayableTracking": {
+        "type": "object",
+        "properties": {
+          "categoryRefs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NamedId"
+            },
+            "nullable": true
+          },
+          "projectRef": {
+            "$ref": "#/components/schemas/NamedId"
+          },
+          "customerRef": {
+            "$ref": "#/components/schemas/NamedId"
+          },
+          "isBilledTo": {
+            "$ref": "#/components/schemas/IsBilledTo"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AccountSummary": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the account",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "description": "The account id",
+            "nullable": true
+          },
+          "value": {
+            "type": "number",
+            "description": "The total value of the account",
+            "format": "double"
+          },
+          "shareOfWallet": {
+            "type": "number",
+            "description": "The percent share of wallet associated with this account. If a company has a total value of $100K, and this account has $30K in it, the SOW will be 30%.",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false,
+        "description": "The account summary"
+      },
+      "AccountSummaryReport": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "relevance": {
+            "type": "number",
+            "format": "double",
+            "readOnly": true
+          },
+          "creditAccountSummaries": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AccountSummary"
+            },
+            "description": "Credit account summaries",
+            "nullable": true
+          },
+          "depositAccountSummaries": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AccountSummary"
+            },
+            "description": "Deposit account summaries",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Account summaries"
+      },
+      "AccountType": {
+        "enum": [
+          "Unknown",
+          "Asset",
+          "Expense",
+          "Income",
+          "Liability",
+          "Equity"
+        ],
+        "type": "string"
+      },
+      "Allocation": {
+        "type": "object",
+        "properties": {
+          "currency": {
+            "type": "string",
+            "nullable": true
+          },
+          "currencyRate": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "allocatedOnDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "totalAmount": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Bill": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "reference": {
+            "type": "string",
+            "nullable": true
+          },
+          "supplierRef": {
+            "$ref": "#/components/schemas/SupplierRef"
+          },
+          "purchaseOrderRef": {
+            "$ref": "#/components/schemas/PurchaseOrder"
+          },
+          "purchaseOrderRefs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PurchaseOrder"
+            },
+            "nullable": true
+          },
+          "issueDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "dueDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "currency": {
+            "type": "string",
+            "nullable": true
+          },
+          "currencyRate": {
+            "type": "number",
+            "format": "double"
+          },
+          "lineItems": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BillLineItem"
+            },
+            "nullable": true
+          },
+          "withholdingTax": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/WithholdingTax"
+            },
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/BillStatus"
+          },
+          "subTotal": {
+            "type": "number",
+            "format": "double"
+          },
+          "taxAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "totalAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "amountDue": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "modifiedDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "sourceModifiedDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "paymentAllocations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DetailedPaymentAllocation"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BillLineItem": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "unitAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "quantity": {
+            "type": "number",
+            "format": "double"
+          },
+          "discountAmount": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "subTotal": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "taxAmount": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "totalAmount": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "discountPercentage": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "accountRef": {
+            "$ref": "#/components/schemas/NamedId"
+          },
+          "taxRateRef": {
+            "$ref": "#/components/schemas/TaxRateRef"
+          },
+          "itemRef": {
+            "$ref": "#/components/schemas/NamedId"
+          },
+          "trackingCategoryRefs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NamedId"
+            },
+            "nullable": true
+          },
+          "tracking": {
+            "$ref": "#/components/schemas/AccountsPayableTracking"
+          },
+          "isDirectCost": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "BillStatus": {
+        "enum": [
+          "Unknown",
+          "Open",
+          "PartiallyPaid",
+          "Paid",
+          "Void",
+          "Draft"
+        ],
+        "type": "string"
+      },
+      "CalculationsReport": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "relevance": {
+            "type": "number",
+            "format": "double"
+          },
+          "date": {
+            "type": "string",
+            "description": "Typically the past-future boundary, which is the date associated with when \"the past\" becomes the \"the future\" for forecasting purposes. Typically,\r\nthis is today's date, but can be a historical date if back-testing historical data.",
+            "format": "date-time"
+          },
+          "startDate": {
+            "type": "string",
+            "description": "The inclusive start date of the period being analyzed. Input data before this date are ignored.",
+            "format": "date-time"
+          },
+          "endDate": {
+            "type": "string",
+            "description": "The inclusive end date of the period being analyzed. Input data after this date are ignored.",
+            "format": "date-time"
+          },
+          "total": {
+            "type": "number",
+            "description": "The sum of the Totals associated with this report",
+            "format": "double"
+          },
+          "dailyValues": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DailyCalculation"
+            },
+            "description": "The values associated used to derive the Total",
+            "nullable": true
+          },
+          "minDailyValue": {
+            "$ref": "#/components/schemas/DailyCalculation"
+          },
+          "maxDailyValue": {
+            "$ref": "#/components/schemas/DailyCalculation"
+          }
+        },
+        "additionalProperties": false,
+        "description": "A bag of calculations associated with a date range. The exact meaning of the calculations is context-dependent."
+      },
+      "CashOnHandReport": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "relevance": {
+            "type": "number",
+            "format": "double",
+            "readOnly": true
+          },
+          "date": {
+            "type": "string",
+            "description": "The date associated with the cash on hand report",
+            "format": "date-time"
+          },
+          "reports": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ClosingBalanceForAccount"
+            },
+            "description": "The individual account reports for this date.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "The cash on hand report"
+      },
+      "ClosingBalanceForAccount": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string",
+            "description": "The account id",
+            "nullable": true
+          },
+          "balance": {
+            "type": "number",
+            "description": "The balance of the account",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Closing balances by account id"
+      },
+      "ClosingBalanceReport": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "relevance": {
+            "type": "number",
+            "format": "double",
+            "readOnly": true
+          },
+          "startDate": {
+            "type": "string",
+            "description": "The inclusive start date of the period being analyzed. Input data before this date are ignored.",
+            "format": "date-time"
+          },
+          "endDate": {
+            "type": "string",
+            "description": "The inclusive end date of the period being analyzed. Input data after this date are ignored.",
+            "format": "date-time"
+          },
+          "bankAccounts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DailyBalance"
+            },
+            "description": "The daily balances associated with bank accounts during this interval",
+            "nullable": true
+          },
+          "creditAccounts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DailyBalance"
+            },
+            "description": "The daily balances associated with credit accounts during this interval",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a closing balance associated with an account on a specific date"
+      },
+      "CoordinatePoints": {
+        "type": "object",
+        "properties": {
+          "x": {
+            "type": "integer",
+            "description": "The X axis value.",
+            "format": "int32",
+            "readOnly": true
+          },
+          "index": {
+            "type": "integer",
+            "description": "The X axis value for our linear regression",
+            "format": "int32",
+            "readOnly": true
+          },
+          "y": {
+            "type": "number",
+            "description": "The Y value of the coordinate points system. If null, it means that this set of coordinate points is predicted by the linear regression that\r\ngenerated this record.",
+            "format": "double",
+            "nullable": true,
+            "readOnly": true
+          },
+          "value": {
+            "type": "number",
+            "description": "AKA the value on the Y-axis for our linear regression.",
+            "format": "double",
+            "nullable": true,
+            "readOnly": true
+          },
+          "predicted": {
+            "type": "number",
+            "description": "The predicted value of Y, based on the calculated slope and Y-intercept values for the whole dataset. Outside of forecast scenarios, this value will\r\nalmost always differ from the actual Y-value.",
+            "format": "double",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a set of coordinate points. This set may be result from things that happened, in which case the Y value will be specified. If it's predicted,\r\nthe Y value will null."
+      },
+      "CustomerRef": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "companyName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DailyBalance": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "description": "The date associated with the balance.",
+            "format": "date-time"
+          },
+          "accountId": {
+            "type": "string",
+            "description": "The id associated with the account",
+            "nullable": true
+          },
+          "openingBalance": {
+            "type": "number",
+            "description": "The opening balance, if any/applicable",
+            "format": "double",
+            "nullable": true
+          },
+          "closingBalance": {
+            "type": "number",
+            "description": "The closing balance, if any/applicable",
+            "format": "double",
+            "nullable": true
+          },
+          "dailyActivity": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/JournalLine"
+            },
+            "description": "The journal lines associated with the account activity on this date",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a balance for a date and account"
+      },
+      "DailyCalculation": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "description": "The date of the calculation",
+            "format": "date-time"
+          },
+          "total": {
+            "type": "number",
+            "description": "The total value calculated",
+            "format": "double"
+          },
+          "forecasted": {
+            "type": "boolean",
+            "description": "Describes whether the Total was calculated based on actual data or predicted based on past history"
+          }
+        },
+        "additionalProperties": false,
+        "description": "A calculation associated with a date. The exact meaning of the values is contextual, based on the parent insight's business rules and meanings."
+      },
+      "DetailedPaymentAllocation": {
+        "type": "object",
+        "properties": {
+          "payment": {
+            "$ref": "#/components/schemas/PaymentAllocationPayment"
+          },
+          "allocation": {
+            "$ref": "#/components/schemas/Allocation"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GrowthRate": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "relevance": {
+            "type": "number",
+            "format": "double",
+            "readOnly": true
+          },
+          "accountId": {
+            "type": "string",
+            "description": "The account id",
+            "nullable": true
+          },
+          "accountType": {
+            "$ref": "#/components/schemas/AccountType"
+          },
+          "startDate": {
+            "type": "string",
+            "description": "The start date",
+            "format": "date-time"
+          },
+          "endDate": {
+            "type": "string",
+            "description": "The end date",
+            "format": "date-time"
+          },
+          "spacingDays": {
+            "type": "integer",
+            "description": "Window spacing is determined by taking the mean number of days between journal entries for an account for the time interval being used to predict\r\nthe future. Sparser data means bigger windows.",
+            "format": "int32"
+          },
+          "equation": {
+            "$ref": "#/components/schemas/ILinearEquation"
+          },
+          "entries": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/WindowEntry"
+            },
+            "description": "The collection of window entries used to calculate this growth rate",
+            "nullable": true
+          },
+          "isPredicted": {
+            "type": "boolean",
+            "description": "Indicates whether this growth rate is based on underlying data, or is a prediction about the future based on past data."
+          },
+          "isRecurring": {
+            "type": "boolean",
+            "description": "Indicates whether the growth rate is considered recurring or not based on some underlying business rules."
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a positive or negative growth rate."
+      },
+      "ILinearEquation": {
+        "type": "object",
+        "properties": {
+          "slope": {
+            "type": "number",
+            "description": "The slope, which may be derived from the coordinate points, or specified",
+            "format": "double",
+            "readOnly": true
+          },
+          "yIntercept": {
+            "type": "number",
+            "description": "The Y-intercept, which may be derived from the coordinate points, or specified",
+            "format": "double",
+            "readOnly": true
+          },
+          "points": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CoordinatePoints"
+            },
+            "description": "The coordinate points, which may be specified, or predicted based on the Slope or Y-intercept values.",
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a linear equation. If the coordinate points collection is null or empty, the equation had its Slope and Y-intercept values specified. If the\r\ncoordinate points has values in the collection, the Slope and Y-intercept values were predicted based on those points. As a practical matter, a consumer\r\nof these values shouldn't care."
+      },
+      "Invoice": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "invoiceNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "customerRef": {
+            "$ref": "#/components/schemas/CustomerRef"
+          },
+          "issueDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "dueDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "modifiedDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "sourceModifiedDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "paidOnDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "currency": {
+            "type": "string",
+            "nullable": true
+          },
+          "currencyRate": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "lineItems": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InvoiceLineItem"
+            },
+            "nullable": true
+          },
+          "paymentAllocations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InvoicePaymentAllocation"
+            },
+            "nullable": true
+          },
+          "withholdingTax": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/WithholdingTax"
+            },
+            "nullable": true
+          },
+          "totalDiscount": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "subTotal": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "additionalTaxAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "additionalTaxPercentage": {
+            "type": "number",
+            "format": "double"
+          },
+          "totalTaxAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "totalAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "amountDue": {
+            "type": "number",
+            "format": "double"
+          },
+          "discountPercentage": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/InvoiceStatus"
+          },
+          "note": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "InvoiceLineItem": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "unitAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "quantity": {
+            "type": "number",
+            "format": "double"
+          },
+          "discountAmount": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "subTotal": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "taxAmount": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "totalAmount": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "accountRef": {
+            "$ref": "#/components/schemas/NamedId"
+          },
+          "taxRateRef": {
+            "$ref": "#/components/schemas/TaxRateRef"
+          },
+          "itemRef": {
+            "$ref": "#/components/schemas/NamedId"
+          },
+          "trackingCategoryRefs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NamedId"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "InvoicePaymentAllocation": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "totalAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "currency": {
+            "type": "string",
+            "nullable": true
+          },
+          "currencyRate": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "note": {
+            "type": "string",
+            "nullable": true
+          },
+          "accountRef": {
+            "$ref": "#/components/schemas/NamedId"
+          },
+          "reference": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "InvoiceStatus": {
+        "enum": [
+          "Unknown",
+          "Draft",
+          "Submitted",
+          "PartiallyPaid",
+          "Paid",
+          "Void"
+        ],
+        "type": "string"
+      },
+      "IsBilledTo": {
+        "enum": [
+          "Unknown",
+          "Customer",
+          "Project"
+        ],
+        "type": "string"
+      },
+      "JournalLine": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "netAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "currency": {
+            "type": "string",
+            "nullable": true
+          },
+          "accountRef": {
+            "$ref": "#/components/schemas/NamedId"
+          }
+        },
+        "additionalProperties": false
+      },
+      "NamedId": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ObligationsByMonth": {
+        "type": "object",
+        "properties": {
+          "month": {
+            "type": "string",
+            "description": "The month and year associated with this set of obligations. Day of the month and time of day have no significance.",
+            "format": "date-time"
+          },
+          "averageDaysToPay": {
+            "type": "integer",
+            "description": "The average days to pay for this year+month. The average is the number of days between IssueDate and PaidOnDate.",
+            "format": "int32"
+          },
+          "invoices": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Invoice"
+            },
+            "description": "The invoices associated with this month",
+            "nullable": true
+          },
+          "bills": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Bill"
+            },
+            "description": "The invoices associated with this month",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "The average days to pay for a given year+month."
+      },
+      "ObligationsReport": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "relevance": {
+            "type": "number",
+            "format": "double",
+            "readOnly": true
+          },
+          "date": {
+            "type": "string",
+            "description": "The date that marks the demarcation between things that definitely happened in the past, and things that might happen in the future. Typically, this\r\ndate is \"today\" in most insights scenarios. Values that appear after this date are typically forecasted values unless otherwise specified.",
+            "format": "date-time"
+          },
+          "startDate": {
+            "type": "string",
+            "description": "The inclusive start date of the period being analyzed. Input data before this date was ignored.",
+            "format": "date-time"
+          },
+          "endDate": {
+            "type": "string",
+            "description": "The inclusive end date of the period being analyzed. Input data after this date was ignored.",
+            "format": "date-time"
+          },
+          "outstandingValue": {
+            "type": "number",
+            "description": "The total value of outstanding obligations.",
+            "format": "double"
+          },
+          "obligationsByCompany": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ObligationsReportForCompany"
+            },
+            "description": "The collection of monthly obligations, grouped and characterized by company id",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Accounts receivable are obligations others have to this SMB. Accounts payable are obligations this SMB has to other entities."
+      },
+      "ObligationsReportForCompany": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the obligation",
+            "nullable": true
+          },
+          "companyId": {
+            "type": "string",
+            "description": "The id of the company associated with the obligation",
+            "nullable": true
+          },
+          "outstandingValue": {
+            "type": "number",
+            "description": "The outstanding value associated with this obligation",
+            "format": "double"
+          },
+          "obligations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ObligationsByMonth"
+            },
+            "description": "The partitioned collection of obligations associated with this company id",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "A wrapper for the monthly obligations associated with a specific company"
+      },
+      "PaymentAllocationPayment": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "note": {
+            "type": "string",
+            "nullable": true
+          },
+          "reference": {
+            "type": "string",
+            "nullable": true
+          },
+          "accountRef": {
+            "$ref": "#/components/schemas/NamedId"
+          },
+          "currency": {
+            "type": "string",
+            "nullable": true
+          },
+          "currencyRate": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "paidOnDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "totalAmount": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProblemDetails": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "detail": {
+            "type": "string",
+            "nullable": true
+          },
+          "instance": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": { }
+      },
+      "PurchaseOrder": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "purchaseOrderNumber": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SupplierRef": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "supplierName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TaxRateRef": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "effectiveTaxRate": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Transaction": {
+        "type": "object",
+        "properties": {
+          "postedOn": {
+            "type": "string",
+            "description": "Posted Date. Null if the transaction hasn't yet posted.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "accountId": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "currency": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          },
+          "parentId": {
+            "type": "string",
+            "description": "The parent JournalEntry id",
+            "nullable": true
+          },
+          "netAmount": {
+            "type": "number",
+            "description": "",
+            "format": "double"
+          },
+          "updatedOn": {
+            "type": "string",
+            "description": "Date the journal line was updated. Null if it wasn't changed.",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Journal entries are typically nested data structures, where several transactions associated with an account id may be grouped into a single date. This\r\ndata structure flattens them into account + date + journal entry for simplicity."
+      },
+      "TrendReport": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "relevance": {
+            "type": "number",
+            "format": "double",
+            "readOnly": true
+          },
+          "date": {
+            "type": "string",
+            "description": "The date that marks the demarcation between things that definitely happened in the past, and things that might happen in the future. Typically, this\r\ndate is \"today\" in most insights scenarios. Values that appear after this date are typically forecasted values unless otherwise specified.",
+            "format": "date-time"
+          },
+          "startDate": {
+            "type": "string",
+            "description": "The inclusive start date of the period being analyzed. Input data before this date was ignored.",
+            "format": "date-time"
+          },
+          "endDate": {
+            "type": "string",
+            "description": "The exclusive end date of the period being analyzed. Input data after this date was ignored.",
+            "format": "date-time"
+          },
+          "accountsReceivableToSalesRatio": {
+            "type": "number",
+            "description": "The ratio of outstanding accounts receivable to booked revenue for the period as a whole number percentage.",
+            "format": "double"
+          },
+          "cashToExpensesRatio": {
+            "type": "number",
+            "description": "The closing cash position on the last day of the period, relative to the mean of the daily expenses for the period.",
+            "format": "double"
+          },
+          "agedReceivablesRatio": {
+            "type": "number",
+            "description": "The ratio of stale, outstanding invoices to paid invoices as a whole number percentage.",
+            "format": "double"
+          },
+          "ageThresholdDays": {
+            "type": "integer",
+            "description": "The number of days used to determined whether an outstanding invoice was stale.",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Trend reports"
+      },
+      "WindowEntry": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "string",
+            "description": "The account id.",
+            "nullable": true
+          },
+          "startDate": {
+            "type": "string",
+            "description": "The inclusive start date.",
+            "format": "date-time"
+          },
+          "endDate": {
+            "type": "string",
+            "description": "The exclusive end date.",
+            "format": "date-time"
+          },
+          "sum": {
+            "type": "number",
+            "description": "The sum of the values that occurred during the interval, if any.",
+            "format": "double",
+            "nullable": true
+          },
+          "entries": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Transaction"
+            },
+            "description": "The transactions that occurred during this window, if any.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a window of time for forecasting purposes that may or may not have transactions in it."
+      },
+      "WithholdingTax": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "amount": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "bearer": {
+        "type": "http",
+        "description": "Basic authentication using a Bearer token",
+        "scheme": "bearer"
+      }
+    }
+  },
+  "security": [
+    {
+      "bearer": [ ]
+    }
+  ]
+}
